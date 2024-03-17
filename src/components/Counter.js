@@ -5,7 +5,7 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: props.initialCount || 0,
     };
   }
 
@@ -23,7 +23,7 @@ class Counter extends Component {
 
   reset = () => {
     this.setState({
-      count: 0,
+      count: this.props.initialCount || 0,
     });
   };
 
